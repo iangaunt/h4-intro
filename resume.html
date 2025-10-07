@@ -2,10 +2,11 @@
 <html>
     <head>
         <title>Resume</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <nav class="navbar">
-            <h1 class="logo"><a href="index.html">personal website</a></h1>
+            <h1 class="logo"><a href="index.html">ian gaunt</a></h1>
             <ul class="nav-list">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -16,7 +17,7 @@
         </nav>
         <main>
             <h1 class="resume-title">Resume</h1>
-            <a href="resume.pdf" download>Download Resume</a>
+            <a class="download" href="resume.pdf" download>Download Resume</a>
             <div class="resume">
                 <section>
                     <h2 class="section-title">Education</h2>
@@ -29,14 +30,14 @@
                 <section>
                     <h2 class="section-title">Experience</h2>
                     <div class="entry">
-                        <p class="entry-info">Software Developer</p>
+                        <h3 class="entry-title">Software Developer</h3>
                         <p class="entry-description">Used a variety of software tools to design and build full-scale applications.</p>
                     </div>
                 </section>
                 <section>
                     <h2 class="section-title">Projects</h2>
                     <div class="entry">
-                        <p class="entry-info">Personal Portfolio</p>
+                        <h3 class="entry-title">Personal Portfolio</h3>
                         <p class="entry-description">Designed a website for my personal portfolio to be used at events.</p>
                     </div>
                 </section>
@@ -60,6 +61,7 @@
                     </ul>
                 </section>
             </div>
+            <img class="index-background" src="pyra.jpg" alt="A picture from Neon Genesis Evangelion.">
         </main>
         <footer class="footer">© 2025 Ian Gaunt | All Rights Reserved</footer>
     </body>

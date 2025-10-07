@@ -1,0 +1,242 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("./MonaSans.woff2");
+}
+
+@mixin flex {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    font-family: "Mona Sans";
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    width: 100vw;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+.navbar {
+    @include flex;
+
+    backdrop-filter: blur(5px);
+    background: rgba(0, 0, 0, 0.099);
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgb(0 0 0 / 0.3);
+    color: black;
+    height: 6%;
+    margin-top: 1%;
+    margin-left: 20%;
+    position: fixed;
+    width: 60%;
+    
+    .logo {
+        @include flex;
+
+        width: 30%;
+
+        a, a:visited {
+            @include flex;
+            color: black;
+            font-size: 80%;
+            transition: font-stretch 0.2s;
+
+            &:hover {
+                font-stretch: ultra-expanded;
+            }
+        }
+    }
+
+    .nav-list {
+        @include flex;
+        width: 60%;
+
+        li {
+            @include flex;
+
+            list-style-type: none;
+            transition: font-stretch 0.2s, font-weight 0.2s;
+            width: 50%;
+
+            a, a:visited {
+                color: black;
+            }
+
+            &:hover {
+                font-stretch: ultra-expanded;
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+main {
+    @include flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+
+    .index-title, .blog-title, .portfolio-title, .resume-title, .contact-title {
+        border: 1px solid rgb(0 0 0 / 0.1);
+        border-radius: 20px;
+        font-size: 600%;
+        font-stretch: ultra-expanded;
+        letter-spacing: 5%;
+        margin-bottom: 2%;
+        padding: 20px;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.366);
+    }
+
+    .about-text {
+        font-size: 170%;
+        text-align: center;
+        margin-left: 30%;
+        width: 40%;
+    }
+
+    .projects {
+        @include flex;
+        
+        .project {
+            @include flex;
+
+            backdrop-filter: blur(5px);
+            border: 1px solid rgb(0 0 0 / 0.1);
+            border-radius: 10px;
+            flex-direction: column;
+            height: 30%;
+            margin-left: 1%;
+            margin-right: 1%;
+            text-align: center;
+            width: 10%;
+
+            img {
+                backdrop-filter: blur(5px);
+                background: rgba(0, 0, 0, 0.099);
+                border-radius: 10px;
+                box-shadow: 0px 0px 20px rgb(0 0 0 / 0.3);
+                width: 80%;
+            }
+
+            .project-name {
+                font-weight: 800;
+                font-stretch: expanded;
+                margin-bottom: 10%;
+            }
+
+            .project-link, .project-link:visited {
+                color: white;
+                transition: font-weight 0.2s;
+
+                &:hover {
+                    font-weight: 800;
+                }
+            }
+        }
+    }
+
+    .section-title {
+        font-stretch: expanded;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+    
+    .download {
+        color: black;
+        margin-top: -1%;
+    }
+
+    .entry {
+        .entry-title {
+            font-stretch: expanded;
+            margin-bottom: 1%;
+        }
+
+        .entry-description {
+            font-stretch: extra-expanded;
+        }
+    }
+
+    .course-list, .skills-list {
+        @include flex;
+
+        li {
+            list-style-type: none;
+            text-align: center;
+            width: 20%;
+        }
+    }
+
+    #content-form {
+        @include flex;
+        flex-direction: column;
+        border: 1px solid rgb(0 0 0 / 0.1);
+        border-radius: 5px;
+        height: 20%;
+        padding: 20px;
+        text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.366);
+        width: 20%;
+
+        .field {
+            @include flex;
+            height: 30%;
+            width: 100%;
+            
+            p {
+                font-size: 120%;
+                font-stretch: ultra-expanded;
+                text-align: center;
+                width: 30%;
+            }
+
+            input, textarea {
+                @include flex;
+                
+                border-radius: 5px;
+                font-size: 80%;
+                text-align: center;
+                height: 80%;
+                width: 60%;
+            }
+        }
+
+        .submit {
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.634);
+            border-radius: 3px;
+            margin-top: 8%;
+            height: 20%;
+            font-size: 120%;
+            width: 100%;
+        }
+    }
+}
+
+.index-background {
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: blur(20px) saturate(30%);
+    height: 120%;
+    left: -10%;
+    position: absolute;
+    top: -10%;
+    width: 120%;
+    z-index: -200;
+}
+
+.footer {
+    bottom: 2%;
+    font-stretch: ultra-expanded;
+    left: 1%;
+    position: fixed;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.366);
+}
